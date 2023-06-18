@@ -1,7 +1,7 @@
 ### 16. 3Sum Closest
 
-(주소)https://leetcode.com/problems/combination-sum/
-
+(주소)[https://leetcode.com/problems/combination-sum/
+](https://leetcode.com/problems/3sum-closest/)
 
 
 #### 문제 요약:
