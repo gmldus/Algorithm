@@ -19,8 +19,31 @@ v : [3,3] -> [3,3,3](if 문에서 걸리기 때문에 생략)  -> [3,5]
 
 #### 풀이 해설:
 
+```javascript
+function dfs(array, sum, index, candidates, target, output) {
+    if (sum > target) {
+        return;
+    }
 
+    if (sum === target) {
+        output.push(array);
+        return;
+    }
 
+    for (let i = index; i < candidates.length; i++) {
+        dfs(array.concat(candidates[i]), sum + candidates[i], i, candidates, target, output);
+    }
+}
+
+var combinationSum = function(candidates, target) {
+    const output = [];
+    dfs([], 0, 0, candidates, target, output);
+    return output;
+};
+```
+---
+
+예전 코드
 ```c++
 class Solution {
 public:
